@@ -1,0 +1,103 @@
+.Phrasebox {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  place-items: center;
+  width: min(100%, 480px);
+  padding: 20px 10px;
+  margin: 0 auto;
+}
+
+article {
+  background-color: rgba(255, 255, 0, 0.1);
+  min-height: 33vh;
+  display: flex;
+  align-items: center;
+}
+
+p {
+  font-size: 16px;
+  height: 2rem;
+  animation-duration: 20s;
+  animation-name: changeSizep;
+  animation-iteration-count: infinite;
+}
+
+.title1 {
+  animation-duration: 20s;
+  animation-name: changeSize;
+  animation-iteration-count: infinite;
+}
+
+@keyframes changeSize {
+  from {
+    display: none;
+    font-size: 20px;
+    color: lightseagreen;
+  }
+  to {
+    display: table-cell;
+    font-size: 25px;
+    color: black;
+  }
+}
+
+@keyframes changeSizep {
+  from {
+    display: none;
+    font-size: 16px;
+    color: lightseagreen;
+  }
+  to {
+    display: table-cell;
+    font-size: 20px;
+    color: black;
+  }
+}
+
+@keyframes appearFromright {
+  from {
+    display: none;
+    position: absolute;
+    right: 0;
+    font-size: 16px;
+  }
+  to {
+    display: table-cell;
+    position: absolute;
+    right: 20vw;
+    font-size: 22px;
+  }
+}
+
+footer {
+  margin-bottom: 5vh;
+}
+
+footer h4 {
+  animation-duration: 10s;
+  animation-name: appearFromright;
+  animation-iteration-count: infinite;
+}
+
+.bt1 {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: lightpink;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  animation-duration: 15s;
+  animation-name: changeSize;
+  animation-iteration-count: infinite;
+}
+.bt1:hover {
+  border-color: #646cff;
+}
+.bt1:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
